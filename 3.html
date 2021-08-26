@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms using grid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: auto;
+        }
+
+        .contacts {
+            background: navy;
+            color: white;
+            padding: 25px;
+        }
+
+        form {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 1fr;
+            padding: 20px;
+        }
+
+        .full {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+        }
+        @media (min-width: 700px) {
+            .middle {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="middle">
+            <div class="contacts">
+                <h3>Our contacts</h3>
+                <p>123 kamagong st.
+                <p>
+                <p>801212121-11</p>
+                <p>mail@mail.com</p>
+            </div>
+            <div class="form">
+                <h1 style="padding: 10px;">Send us a message</h1>
+                <form>
+                    <p><label for="name">Your name</label><input type="text"></p>
+                    <p><label for="Skype">Skype</label><input type="text"></p>
+                    <p><label for="Email">Email Address</label><input type="text"></p>
+                    <p><label for="Topic">Topic</label><input type="text"></p>
+                    <p class="full"><label>Write your message</label>
+                        <textarea cols="50" rows="7"></textarea>
+                    </p>
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
